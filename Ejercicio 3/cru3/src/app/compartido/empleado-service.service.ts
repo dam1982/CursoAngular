@@ -35,14 +35,16 @@ export class EmpleadoServiceService {
 
     }
 
-    
-
+    /*
+    es una prueba de git 
+    */ 
+/*
     GetEmpleadoId(empleado: EmpleadoModel){
       return  this.http.get(this.url+'/Empleado/'+empleado.Id);
 
     }
 
-  
+  */
 
 
 
