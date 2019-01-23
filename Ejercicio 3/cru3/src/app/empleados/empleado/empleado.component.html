@@ -1,0 +1,39 @@
+<form #form="ngForm" (submit)="insertarDatos(form)"> 
+
+
+  <div class="form-group">
+    <label>Nombre</label>
+    <input [(ngModel)]="empleadoserv.empleado.Nombre"  name="Nombre" #Nombre="ngModel" class="form-control"  placeholder="" aria-describedby="helpId">
+    
+  </div>
+
+  <div class="form-group">
+    <label >Cargo</label>
+    <input  [(ngModel)]="empleadoserv.empleado.Cargo" name="Cargo"  #Cargo="ngModel" class="form-control" aria-describedby="helpId">
+    
+  </div>
+ <div>
+   <button type="submit" class="btn btn-primary" >Insertar Datos</button>
+ </div>
+
+</form>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<form #Form="ngForm" (submit)="verEmpleadoXId(Form)">
+
+    <label >Id De Busqueda</label>
+    <input  [(ngModel)]="empleadoserv.empleado.Id" name="Id"  #Id="ngModel" class="form-control" >
+    
+    <button  type="submit"class="btn btn-primary" >Buscar</button>
+
+    
+ 
+</form>

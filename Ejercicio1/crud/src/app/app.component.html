@@ -1,0 +1,54 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      
+       <p class="align-content-center">Formulario de insercion</p>
+     
+    </div>
+    <div class="card-blok">
+      <form novalidate>
+      <div>
+        <div class="form-group">
+            <label for="APaterno" >nombre</label>
+            <input [(ngModel)]="selectEmployee.nombre" name="nombre" class="form-control">
+          </div>
+       
+           <div class="form-group">
+              <label for="APaterno" >country</label>
+              <input [(ngModel)]="selectEmployee.country" name="country" class="form-control">
+            </div>
+          
+              <div>
+                    <button  (click)=" addOrEdit()"    class="btn btn-primary">Registrar</button>
+                  </div>
+                  <div>
+                      <button *ngIf="selectEmployee.id !== 0" class="btn btn-primary" (click)="delete()">Borrar</button>
+  
+                    </div>
+       </div>       
+                  
+          
+        
+
+      </form>
+
+    </div>  
+
+  </div> 
+</div>
+
+<div>
+  <ul><li *ngFor="let item of Employearray"
+ class="list-group-item list-group-item-action" 
+ (click)="employeeOfEdit(item)"
+ [class.active]="item == selectEmployee">
+<span class="badge badge-primary"  >{{item.id}}</span>
+        {{item.nombre}} -{{item.country}}
+  </li></ul>
+</div>
+
+
+
+<router-outlet></router-outlet>

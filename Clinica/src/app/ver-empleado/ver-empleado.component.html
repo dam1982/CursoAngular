@@ -1,0 +1,93 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+ 
+</div>
+
+ 
+<div class="container">
+<div class="row">
+  <div class="col-md-6"> 
+
+    <div *ngFor="let item of users ">
+    <h1> {{ item.nombres}} </h1>
+    </div>
+ 
+  </div>
+ 
+  <div class="col-md-6"> 
+
+    <div *ngFor="let item of users ">
+    <h1> {{ item.edad}} </h1>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      
+       <p class="align-content-center">Formulario de insercion</p>
+     
+    </div>
+    <div class="card-blok">
+      <form novalidate>
+        <div class="form-group">
+          <label for="nombre" >nombre</label>
+          <input type="text" class="form-control" id="nombre">
+        </div>
+        <div class="form-group">
+            <label for="APaterno" >APaterno</label>
+            <input type="text" class="form-control" id="APaterno">
+          </div>
+          <div class="form-group">
+              <label for="AMaterno" >AMaterno</label>
+              <input type="text" class="form-control" id="AMaterno">
+            </div>
+            <div class="form-group">
+                <label for="Edad" >Edad</label>
+                <input type="number" class="form-control" id="Edad">
+              </div>
+
+              
+
+                <div class="form-group">
+                    <label for="Sexo" >Sexo</label>
+                    <input type="text" class="form-control" id="Sexo">
+                </div>
+
+                  <div class="form-group">
+                      <label for="nroDocumento" >nroDocumento</label>
+                      <input type="text" class="form-control" id="nroDocumento">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="Direccion" >Direccion</label>
+                      <input type="text" class="form-control" id="Direccion">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="Telefono" >Telefono</label>
+                      <input type="text" class="form-control" id="Telefono">
+                  </div>
+
+            
+                    <button class="btn btn-primary">Registrar</button>
+                   
+                  
+          
+        
+
+      </form>
+
+    </div>  
+
+  </div> 
+</div>
+
+

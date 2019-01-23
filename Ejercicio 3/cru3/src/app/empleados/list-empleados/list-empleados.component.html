@@ -1,0 +1,18 @@
+
+  
+  
+  
+  <table class="table table-hover">
+        <tr *ngFor="let item of users ">
+          <td (click)="populateForm(item)"> {{item.Id}} </td>
+          <td (click)="populateForm(item)" > {{item.Nombre}} </td>
+          <td (click)="populateForm(item)"> {{item.Cargo}} </td>
+          <td><button class="btn btn-warning" (click)=" EliminarEmpleado(item.Id)"> x         
+          </button></td>
+       
+        </tr>
+      </table>
+
+
+      
+

@@ -1,0 +1,26 @@
+<form #form="ngForm" (submit)="onSubmit(form)">
+ 
+ 
+  <div class="form-group">
+    <label >Nombre</label>
+    <input name="Nombre" #Nombre="ngModel"  [(ngModel)]="service.formData.Nombre" class="form-control" required>
+ <div class="validation.error" *ngIf="Nombre.invalid && Nombre.touched">
+nombre requerido
+ </div>
+  </div>
+
+  <div class="form-group">
+    <label >Cargo</label>
+    <input name="Cargo" #Cargo="ngModel"  [(ngModel)]="service.formData.Cargo" class="form-control">
+ 
+  </div>
+
+  <div class="form-group">
+     <button type="submit" [disabled]="form.invalid"  class=" btn.btn-lg btn-block">Insertar</button>
+
+  </div>
+
+
+
+
+</form>
